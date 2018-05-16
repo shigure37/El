@@ -1,3 +1,4 @@
+USE DB stockdb;
 CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   id INT(11) NOT NULL AUTO_INCREMENT,
   code  VARCHAR(10) NOT NULL COMMENT '代码',
@@ -12,4 +13,4 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   fixedAssets  DOUBLE NOT NULL COMMENT '固定资产',
   reserved     DOUBLE NOT NULL COMMENT '公积金'
   PRIMARY KEY (code)
-) ENGINE=InnoDB
+) ENGINE=InnoDB;
