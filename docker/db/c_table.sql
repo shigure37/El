@@ -11,6 +11,6 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   totalAssets DOUBLE NOT NULL COMMENT '总资产（万）',
   liquidAssets DOUBLE NOT NULL COMMENT '流动资产',
   fixedAssets  DOUBLE NOT NULL COMMENT '固定资产',
-  reserved     DOUBLE NOT NULL COMMENT '公积金'
-  PRIMARY KEY (code)
+  reserved     DOUBLE NOT NULL COMMENT '公积金',
+  PRIMARY KEY (id)
 );
