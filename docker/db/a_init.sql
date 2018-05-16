@@ -1,4 +1,4 @@
 CREATE DATABASE stockdb;
-CREATE USER 'shigure'@'%';
-GRANT ALL PRIVILEGES ON stockdb.* To 'shigure'@'%'; 
+CREATE USER 'shigure' IDENTIFIED BY 'guoke618';
+GRANT ALL PRIVILEGES ON stockdb.* To 'shigure'; 
 
