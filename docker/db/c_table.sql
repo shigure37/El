@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   profit      VARCHAR(100) NOT NULL COMMENT '利润同比', 
   gpr         VARCHAR(100) NOT NULL COMMENT '毛利率',
   npr         VARCHAR(100) NOT NULL COMMENT '净利润率',
-  hoders      DOUBEL  NOT NULL COMMENT '股东人数',
+  hoders      DOUBLE  NOT NULL COMMENT '股东人数',
   concept     VARCHAR(100) NOT NULL COMMENT '概念名称',
   PRIMARY KEY (id)
 );
