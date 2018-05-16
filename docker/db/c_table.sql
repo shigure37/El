@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   fixedAssets  DOUBLE NOT NULL COMMENT '固定资产',
   reserved     DOUBLE NOT NULL COMMENT '公积金'
   PRIMARY KEY (code)
-) ENGINE=InnoDB;
+);
