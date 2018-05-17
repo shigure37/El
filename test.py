@@ -12,15 +12,22 @@ cursor = db.cursor()
 query_sql = "select * from tb_test;"
 insert_sql = "INSERT INTO tb_test(code, name)values ('test', '插入汉字数据');"
 try:
-    print(insert_sql )
-    cursor.execute (query_sql)
-    data = cursor.fetchall ();
-    print(data)
-    db.commit ()
+    #print(insert_sql )
+    #cursor.execute (query_sql)
+    #data = cursor.fetchall ();
+    #print(data)
+    #db.commit ()
+    test = 1
 except Exception as e:
     s = "error {0}".format(str(e))
     utf8str = s.encode("utf-8")
     print(utf8str)
-    db.rollback()
+    #db.rollback()
 db.close()
 
+import tushare as ts
+
+df = ts.get_stock_basics()
+for index, row in df.iterrows():
+    print(row.index.tolist());
+    break;
