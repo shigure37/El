@@ -10,7 +10,7 @@ import pymysql
 if __name__ == "__main__":
     df = ts.get_stock_basics()
     #print(type(df))
-    db = pymysql.connect("127.0.01", "shigure", "GuoKe618", "stockdb")
+    db = pymysql.connect("127.0.01", "shigure", "GuoKe618", "stockdb", use_unicode = True, charset="utf8")
     cursor = db.cursor()
     for index, row in df.iterrows():
         insert_sql = """
