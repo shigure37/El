@@ -16,7 +16,7 @@ if __name__ == "__main__":
         insert_sql = """
                     INSERT INTO tb_stock_basic_info(code, name)
                     values (%(code)s, %(name)s)
-                    """ % {'code':row['code'], 'name':row['name']}
+                    """ % {'code':index, 'name':row['name']}
         try:
             cursor.execute(insert_sql)
             db.commit()
