@@ -27,3 +27,4 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   concept     VARCHAR(100) NOT NULL COMMENT '概念名称',
   PRIMARY KEY (id)
 );
+ALTER TABLE tb_stock_basic_info  CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
