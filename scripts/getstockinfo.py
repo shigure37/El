@@ -10,12 +10,12 @@ import pymysql
 if __name__ == "__main__":
     df = ts.get_stock_basics()
     #print(type(df))
-    db = pymysql.connect("127.0.01", "shigure", "GuoKe618", "stockdb", use_unicode = True, charset="utf8")
+    db = pymysql.connect("127.0.0.1", "shigure", "GuoKe618", "stockdb", use_unicode = True, charset="utf8")
     cursor = db.cursor()
     for index, row in df.iterrows():
         insert_sql = """
                     INSERT INTO tb_test(code, name)
-                    values (%(code)s, %(name)s)
+                    values ('%(code)s', '%(name)s')
                     """ % {'code':index, 'name':row['name']}
         try:
             cursor.execute(insert_sql)
