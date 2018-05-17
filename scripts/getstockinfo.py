@@ -13,3 +13,6 @@ if __name__ == "__main__":
     db = pymysql.connect("localhost", "shigure", "GuoKe618", "stockdb")
     cursor = db.cursor()
     cursor.execute("SELECT VERSION()")
+    data = curosor.fetchone()
+    print("database version:%s" % data)
+    db.close()
