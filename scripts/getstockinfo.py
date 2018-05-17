@@ -20,6 +20,9 @@ if __name__ == "__main__":
         try:
             cursor.execute(insert_sql)
             db.commit()
-        except:
+        except Exception as e:
+            s = "Error {0}".format(str(e))
+            utf8str = s.encode("utf-8")
+            print(utf8str)
             db.rollback()
     db.close()
