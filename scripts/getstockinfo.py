@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     for index, row in df.iterrows():
         insert_sql = """
-                    INSERT INTO tb_stock_basic_info(code, name)
+                    INSERT INTO tb_test(code, name)
                     values (%(code)s, %(name)s)
                     """ % {'code':index, 'name':row['name']}
         try:
