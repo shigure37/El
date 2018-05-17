@@ -17,10 +17,9 @@ if __name__ == "__main__":
                     INSERT INTO tb_stockbaseinfo(code, name)
                     values (%(code)s, %(name)s)
                     """ % {'code':row['code'], 'name':row['name']}
-    try:
-        cursor.execute(insert_sql)
-        db.commit()
-    except:
-        db.rollback()
-    data = cursor.fetchone()
+        try:
+            cursor.execute(insert_sql)
+            db.commit()
+        except:
+            db.rollback()
     db.close()
