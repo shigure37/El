@@ -16,8 +16,8 @@ if __name__ == "__main__":
         print(type(row['reservedPerShare']), row['reservedPerShare'])
         insert_sql = """
                     INSERT INTO tb_stock_basic_info(code, name, industry)
-                    values ('%(code)s', '%(name)s, '%(industry)s');
-                    """ % {'code':index, 'name':row['name'], 'industry':row['industry']}
+                    values ('%(code)s', '%(name)s, '%(industry)s, '%(area)s', %(pe)f);
+                    """ % {'code':index, 'name':row['name'], 'industry':row['industry'], 'area':row['area'], 'pe':row['pe']}
         try:
             print(insert_sql)
             #cursor.execute(insert_sql)
