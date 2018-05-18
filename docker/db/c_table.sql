@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   liquidAssets DOUBLE NOT NULL COMMENT '流动资产',
   fixedAssets  DOUBLE NOT NULL COMMENT '固定资产',
   reserved     DOUBLE NOT NULL COMMENT '公积金',
-  reservedPerShared DOUBLE NOT NULL COMMENT '每股公积金',
+  reservedPerShare DOUBLE NOT NULL COMMENT '每股公积金',
   esp         DOUBLE NOT NULL  COMMENT '每股收益',
   bvps        DOUBLE NOT NULL  COMMENT '每股净资',
   pb          DOUBLE NOT NULL  COMMENT '市净率',
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   profit      DOUBLE NOT NULL COMMENT '利润同比', 
   gpr         DOUBLE NOT NULL COMMENT '毛利率',
   npr         DOUBLE NOT NULL COMMENT '净利润率',
-  hoders      DOUBLE  NOT NULL COMMENT '股东人数',
+  holders      DOUBLE  NOT NULL COMMENT '股东人数',
   concept     VARCHAR(100) NOT NULL COMMENT '概念名称',
   PRIMARY KEY (id)
 );
