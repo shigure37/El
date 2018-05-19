@@ -27,4 +27,26 @@ CREATE TABLE IF NOT EXISTS tb_stock_basic_info (
   concept     VARCHAR(100) NOT NULL COMMENT '概念名称',
   PRIMARY KEY (id)
 );
+CREATE TABLE IF NOT EXISTS tb_stock_history_day (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  code   VARCHAR(10) NOT NULL COMMENT '股票代码',
+  date   DATE NOT NULL COMMENT '日期',
+  open   DOUBLE NOT NULL COMMENT '开盘价',
+  high   DOUBLE NOT NULL COMMENT '最高价',
+  close  DOUBLE NOT NULL COMMENT '收盘价',
+  low    DOUBLE NOT NULL COMMENT '最低价',
+  volume DOUBLE NOT NULL COMMENT '成交量',
+  price_change DOUBLE NOT NULL COMMENT '价格变动',
+  p_change DOUBLE NOT NULL COMMENT '涨跌幅',
+  ma5    DOUBLE  NOT NULL COMMENT '5日均价',
+  ma10   DOUBLE  NOT NULL COMMENT '10日均价',
+  ma20   DOUBLE  NOT NULL COMMENT  '20日均价', 
+  v_ma5  DOUBLE  NOT NULL COMMENT  '5日均量',
+  v_ma10 DOUBLE  NOT NULL COMMENT   '10日均量',
+  v_ma20 DOUBLE  NOT NULL COMMENT   '20日均量', 
+  turnover DOUBLE NOT NULL COMMENT  '换手率', 
+  PRIMARY KEY (id)
+);
 ALTER TABLE tb_stock_basic_info  CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE tb_stock_history_day  CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
