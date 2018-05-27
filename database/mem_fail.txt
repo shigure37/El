@@ -1,0 +1,4 @@
+sudo dd if=/dev/zero of=/swapfile bs=1M count=1024 #增加1G的SWAP进去
+$ sudo mkswap /swapfile
+$ sudo swapon /swapfile
+free
