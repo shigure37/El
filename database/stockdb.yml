@@ -2,7 +2,11 @@ version: '3.1'
 
 services:
   db:
+<<<<<<< HEAD
     image: mavinyehdocker/stockdb:1.0 
+=======
+    image: test:1.0
+>>>>>>> 1447ce6ec03d792341c95983848477633ece8745
     environment:
       MYSQL_ROOT_PASSWORD: guoke618
     ports:
